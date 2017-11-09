@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- 녹색부분 반드시 들어가야한다. -->
+
+<configuration>
+
+	<typeAliases>
+		<typeAlias alias="member" type="com.goyangisoft.gysroot.model.MemberBean" />
+	</typeAliases>
+
+	<!-- root-context.xml에서 매퍼의 위치를 설정했습니다. 
+	<property name="mapperLocations" 
+	value="classpath*:sql/*.xml" /> -->
+
+</configuration>
+

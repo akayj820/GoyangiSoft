@@ -1,0 +1,472 @@
+
+/*------------------------------------*\
+    Flaunt JS Navigation
+\*------------------------------------*/
+
+/* aside:gnb */
+
+#gnb {
+    margin: 0;
+    position: relative;
+    height: 80px;
+    text-align: center;
+}
+
+#gnb:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    content: ""
+}
+
+#gnb a,
+#gnb a:hover {
+	text-decoration:none;
+}
+#gnb ul,
+#gnb ol {
+	list-style:none;
+	padding-left: 0;
+}
+
+#gnb .nav {
+	position:relative;
+	display:inline-block;
+	font-size:14px;
+	font-weight:900;
+}
+#gnb .nav-list {
+	display: inline-block;
+}
+#gnb .nav-item {
+	float: left;
+	display:inline;
+	zoom:1;
+	position:relative;
+	padding: 0 50px;
+	line-height: 80px;
+	z-index: 999;
+	transition: all 0.3s ease;
+}
+#gnb .nav-item a .nav-item-hover-deco{
+    position: absolute;
+    width: 0;
+    height: 7px;
+    background-color: #f4e27a;
+    margin-top: -38px;
+    z-index: -1;
+    margin-left: -10%;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+#gnb .nav-item.active a .nav-item-hover-deco,
+#gnb .nav-item:hover a .nav-item-hover-deco{
+	/*display: block;*/
+	width: 120%;
+}
+#gnb .nav-item a {
+	display:block;
+	position: relative;
+	color:#363636;
+	font-weight: 400;
+	/*background:#7A1E61;*/
+	/*border-bottom:1px solid #8B2870;*/
+}
+#gnb .nav-item.btn-exc1 a{
+	color: #b14130;
+}
+#gnb .nav-item > a:hover {
+	/*background:#822368;*/
+}
+#gnb .nav-item:hover .nav-submenu {
+	display:block;
+}
+/* Navigation submenu */
+#gnb .nav-submenu {
+	display:none;
+	position:absolute;
+    left: 50%;
+    margin-left: -80px;
+	min-width:150px;
+	/*border-top:1px solid #f4c81d;*/
+	box-shadow: 0 2px 3px rgba(0,0,0,.2);
+}
+#gnb .nav-submenu-item a {
+	border-top:1px solid rgba(0,0,0,.1);
+	background-color: #ffffff;
+	display:block;
+	padding: 10px 20px;
+	line-height: 30px;
+	overflow: hidden;
+	font-size: 0.86em;
+	min-width: 160px;
+	box-sizing: border-box;
+	text-align: center;
+}
+#gnb .nav-submenu-item a:hover {
+	background:#f4c81d; 
+	/* 하위 메뉴에 마우스 올리면 바뀌는 색깔 지정 */
+}
+/* Mobile navigation */
+
+#gnb > button{
+	height: 80px;
+	line-height: 90px;
+	padding: 0;
+	width: 60px;
+	box-sizing: border-box;
+	text-align: center;
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	transition: all 0.3s ease;
+}
+#gnb > button > i{
+	color: #f4c81d;
+	font-size: 25px;
+	margin: 10px;
+}
+
+	#hd_sch {
+		display: block;
+		height: 60px;
+		position: absolute;
+		z-index: 999;
+		bottom: -60px;
+		left: 0;
+		width: 100%;
+		background: #f8f9fa;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		box-shadow: 0 3px 5px rgba(0,0,0,.15);
+		/*transition: all 0.3s ease;*/
+		overflow: hidden;
+	}
+	#hd_sch.inactive{
+		display: none;
+		/*height: 0;*/
+	}
+	#hd_sch > .container{
+		position: relative;
+		overflow: hidden;
+	}
+
+	#hd_sch form{
+		position: relative;
+		display: block;
+	}
+	#hd_sch form:after {
+	    display: block;
+	    visibility: hidden;
+	    clear: both;
+	    content: ""
+	}
+
+	#hd_sch h3 {
+	    position: absolute;
+	    font-size: 0;
+	    text-indent: -9999em;
+	    line-height: 0;
+	    overflow: hidden
+	}
+
+	#hd_sch #sch_submit {
+	    width: 60px;
+	    height: 60px;
+	    line-height: 60px;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    background-color: transparent;
+	    border: none;
+	}
+	#hd_sch #sch_submit i{
+	    color: #f4c81d;
+	    font-size: 25px;
+	}
+
+	#hd_sch #sch_str {
+	    width: 100%;
+	    line-height: 30px;
+	    border: 0;
+	    height: 60px;
+	    box-sizing: border-box;
+	    padding-left: 20px;
+	    padding-right: 20px;
+	    background-color: transparent;
+	}
+
+	#hd_sch #sch_str:active {
+	outline: none;
+	border: none;
+	}
+
+	#hd_sch #sch_str:focus {outline:0;}
+
+	/*#hd_sch:before {*/
+	/*    content: "";*/
+	/*    position: absolute;*/
+	/*    top: -8px;*/
+	/*    right: 12px;*/
+	/*    width: 0;*/
+	/*    height: 0;*/
+	/*    border-style: solid;*/
+	/*    border-width: 0 6px 8px 6px;*/
+	/*    border-color: transparent transparent #aaa transparent;*/
+	/*}*/
+
+	/*#hd_sch:after {*/
+	/*    content: "";*/
+	/*    position: absolute;*/
+	/*    top: -7px;*/
+	/*    right: 12px;*/
+	/*    width: 0;*/
+	/*    height: 0;*/
+	/*    border-style: solid;*/
+	/*    border-width: 0 6px 8px 6px;*/
+	/*    border-color: transparent transparent #fff transparent;*/
+	/*    z-index: 1919*/
+	/*}*/
+
+#gnb .nav-mobile {
+	display:none; /* Hide from browsers that don't support media queries */
+}
+/* Mobile navigation, clickable area for revealing <ul> */
+#gnb .nav-click {
+	display:none;
+	height:50px;
+	width:50px;
+	line-height: 50px;
+	text-align: center;
+	cursor:pointer;
+}
+#gnb .nav-click i {
+}
+#gnb .nav-click:hover {
+
+}
+#gnb .nav-rotate {
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+
+
+
+
+
+#hd.fixed #gnb{
+	position: relative;
+}
+#hd.fixed #gnb > button{
+	line-height: 60px;
+	height: 60px;
+}
+#hd.fixed #gnb .nav-item{
+	line-height: 60px;
+}
+#hd.fixed #gnb .nav-item a .nav-item-hover-deco{
+	margin-top: -28px;
+}
+
+
+/*------------------------------------*\
+    Media Queries
+\*------------------------------------*/
+
+@media only screen and (max-width: 768px) {
+	#hd .head_nav{
+		height: 50px;
+	}
+	#hd .head_nav > .container{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#gnb .nav-mobile {
+		display:block;
+	}
+	#gnb .nav {
+		width:100%;
+		padding:50px 0 0;
+
+	}
+	#gnb .nav-list {
+		display:none;
+		z-index: 9999;
+		position: absolute;
+		right: 0;
+		top: 50px;
+		width: 200px;
+		overflow: hidden;
+		background-color: #fff;
+		box-shadow: 0 2px 3px rgba(0,0,0,.2);
+	}
+	#gnb .nav-submenu{
+		margin-left: 0;
+		left: 0;
+		box-shadow: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	}
+
+	#gnb{
+		margin-right: 0;
+		margin-left: 0;
+	}
+	#gnb > button{
+		height: 50px;
+		width: 50px;
+		line-height: 50px;
+	}
+
+	#gnb > button.nav-item-search{
+		position: absolute;
+		right: 0;
+	}
+	#gnb > button.nav-item-search i{
+		color: #eeca3e;
+		font-size: 30px;
+	}
+
+
+	#hd.fixed #gnb > button{
+		line-height: 50px;
+		height: 50px;
+	}
+	#gnb .nav-item {
+		padding: 0;
+		float:left;
+		line-height: 0;
+	    display: block;
+	    width: 200px;
+	}
+	#gnb .nav-item-hover-deco{
+		display: none !important;
+	}
+	#gnb .nav-submenu{
+		border-bottom: none;
+	}
+	#gnb .nav-submenu-item a{
+		text-align: left;
+	}
+	#gnb .nav-submenu-item:last-child a{
+		border-bottom: none;
+	}
+	#gnb .nav-item > a {
+		width: 100%;
+		height: 50px;
+		line-height: 50px;
+		padding: 0 20px;
+		display: inline-block;
+		text-align: left;
+		float: left;
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+	}
+	#gnb .nav-click {
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 50px;
+		text-align: right;
+		right: 0;
+		top: 0;
+		z-index: 1;
+		padding-right: 15px;
+	}
+	#gnb .nav-mobile-open {
+		border-radius:5px 5px 0 0;
+		-webkit-border-radius:5px 5px 0 0;
+		-moz-border-radius:5px 5px 0 0;
+	}
+	#gnb .nav-item:hover .nav-submenu {
+		display:none;
+	}
+	#gnb .nav-submenu {
+		position:static;
+		width:100%;
+	}
+
+
+	
+
+
+	#hd_sch #sch_str{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	#hd_sch #sch_submit{
+		right: 0;
+	}
+}
+
+
+
+
+
+
+
+#navigator{
+	padding: 10px 0;
+}
+#navigator .homeicon{
+	display: inline-block;
+	background-color: #b44135;
+	font-size: 12px;
+	color: #fff;
+	border-radius: 20px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+#navigator ul{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+}
+#navigator ul li{
+	display: inline-block;
+	color: #333;
+	font-weight: 200;
+	font-size: 12px;
+	padding-left: 5px;
+	padding-right: 12px;
+	background: url(../img/arrow_right.png) no-repeat right 50%;
+}
+#navigator ul li:last-child{
+	background: none;
+	padding-right: 5px;
+	color: #b44135;
+}
+
+
+
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	#gnb{
+		text-align: right;
+		padding-right: 60px;
+	}
+	#gnb .nav-item{
+		padding: 0 30px;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	#gnb{
+		text-align: right;
+		padding-right: 60px;
+	}
+	#gnb .nav-item{
+		padding: 0 20px;
+	}
+}
