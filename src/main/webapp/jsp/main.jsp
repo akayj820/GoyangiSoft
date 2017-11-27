@@ -42,7 +42,7 @@
     	position: relative;
     	margin: 0px;
     	padding: 0px;
-    	background: rgb(95, 63, 50);
+    	background: #18bc9c; /* 상단 메뉴 배경색 */
     	transition: all 0.3s ease;
 	}
 

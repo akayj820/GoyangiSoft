@@ -131,7 +131,7 @@
 	                            </ul>
 	                        </li>
 	                        <li id="nav-item3" class="nav-item">
-	                            <a href="http://bananacoding.ac/shop/list.php?ca_id=20">바나나코드#
+	                            <a href="http://bananacoding.ac/shop/list.php?ca_id=20">고양이소프트#
 	                                <div class="nav-item-hover-deco"></div>
 	                            </a>
 	                        </li>
@@ -733,7 +733,7 @@
 	    		
 	    		else if( jQuery( me ).val() == "" && jQuery( me ).val() == jQuery( '#reg_mb_password' ).val() ){
 	    			$pwTd.css( 'display', "");
-	    			$pwText.val( "비밀번호를 3자리 이상 입력하세요." );
+	    			$pwText.val( "비밀번호를 8자리 이상 입력하세요." );
 	    			$pwText.css( 'color', 'red' );
 	    		}
 	    	

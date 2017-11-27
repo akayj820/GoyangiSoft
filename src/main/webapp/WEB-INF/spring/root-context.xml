@@ -4,12 +4,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	<bean class="org.apache.commons.dbcp.BasicDataSource" id="dataSource"
-		destroy-method="close">
-		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
-		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
-		<property name="username" value="gyisoft" />
-		<property name="password" value="1234" />
+	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/testdb?autoReconnect=true" />
+		<property name="username" value="root" />
+		<property name="password" value="q1w2e3r4^^" />
 	</bean>
 
 	<!-- 마이바티스 환경 설정 파일의 매퍼 파일 위치 설정을 여기서 했습니다. -->

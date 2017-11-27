@@ -38,9 +38,9 @@ public class MemberAction {
 		
 		System.out.println("MemberAction member_register_update 진입 성공");
 		System.out.println("id=" + m.getMemid());
-		System.out.println("id=" + m.getMememail());
-		System.out.println("id=" + m.getMembirth());
-		System.out.println("id=" + m.getMemtel());
+		System.out.println("email=" + m.getMememail());
+		System.out.println("birth=" + m.getMembirth());
+		System.out.println("tel=" + m.getMemtel());
 		
 		PrintWriter out = response.getWriter();
 
@@ -54,3 +54,4 @@ public class MemberAction {
 
 	}
 }
+ 
