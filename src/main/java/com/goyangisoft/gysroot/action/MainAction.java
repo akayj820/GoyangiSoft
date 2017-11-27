@@ -18,4 +18,14 @@ public class MainAction {
 	public String main(HttpServletRequest request) throws Exception {
 	      return "main";
 	}
+	
+	@RequestMapping(value="login")
+	public String login(HttpServletRequest request) throws Exception {
+	      return "login";
+	}
+	
+	@RequestMapping(value="register")
+	public String register(HttpServletRequest request) throws Exception {
+	      return "register";
+	}
 }

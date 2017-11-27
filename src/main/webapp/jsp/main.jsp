@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>main page</title>
 
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="./resources/js/jquery-1.12.4.js"></script>
@@ -113,7 +113,7 @@
 	<header id="hd">
 		<div class="container">
 			<ul id="hd_tnb">
-            	<li><a href="">로그인</a></li>
+            	<li><a href="./login">로그인</a></li>
             	<li><a href="" id="snb_join">회원가입</a></li>
             	<li><a href="">마이페이지</a></li>
        		</ul>
@@ -123,6 +123,7 @@
         <div class="head_nav">
             <div class="container">
                 <div id="logo">
+                <!-- mobile_shop.css에서 로고 이미지 경로 설정 -->
                     <a href="./main"></a>
                 </div>
 

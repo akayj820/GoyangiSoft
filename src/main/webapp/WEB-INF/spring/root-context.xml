@@ -8,8 +8,8 @@
 		destroy-method="close">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
 		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
-		<property name="username" value="catsoft" />
-		<property name="password" value="catsoft" />
+		<property name="username" value="gyisoft" />
+		<property name="password" value="1234" />
 	</bean>
 
 	<!-- 마이바티스 환경 설정 파일의 매퍼 파일 위치 설정을 여기서 했습니다. -->
